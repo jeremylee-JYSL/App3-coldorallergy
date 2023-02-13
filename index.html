@@ -38,6 +38,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;
         var cold_count = 0;
+	var allergy_odds = 0;
+	var cold_odds = 0;
 
 
         function allergyAdd(){
@@ -49,6 +51,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function calculateAllergyOdds(){
+	   allergy_odds = allergy_count * 25;
+	}
+	
+	function calculateColdOdds(){
+	  cold_odds = cold_count * 25;
+	}
 
   </script>
 
@@ -99,7 +109,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p> <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 		</p>    
-		 </div><!-- buttons --> 
+		 </div><!-- q1,buttons --> 
 </div>
 
 <div class="page" id="two">
@@ -111,7 +121,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p> <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 		</p>    
-		 </div><!-- buttons --> 
+		 </div><!-- q2,buttons --> 
 </div>	
 
 <div class="page" id="three">
@@ -123,7 +133,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p> <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 		</p>    
-		 </div><!-- buttons --> 
+		 </div><!-- q3,buttons --> 
 </div>	
 
 <div class="page" id="four">
@@ -135,17 +145,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 		</p>    
-		 </div><!-- buttons --> 
+		 </div><!-- q4,buttons --> 
 </div>	
 	
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
+		<h1>Generate Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<h1> Test, do results pop up here</h1>
+        <p> <a href="#six"  onclick="calculateAllergyOdds();","calculateColdOdds();" class="w3-btn w3-black"> Generate Allergy and Cold Results</a>
+		</p>    
+		 </div><!--  --> 
 </div>	
+
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container"
+		<h1> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </h1>
+</div><!-- results page -->	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
