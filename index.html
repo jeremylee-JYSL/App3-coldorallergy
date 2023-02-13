@@ -46,19 +46,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             allergy_count = allergy_count + 1;
 		//alert(allergy_count);
 
-        }
+        }//add count
 
         function coldAdd(){
             cold_count = cold_count + 1;
-        }
+        }//add count
 	
 	function calculateAllergyOdds(){
 	   allergy_odds = allergy_count * 25;
-	}
+	}//multiply by 25 to show percentage
 	
 	function calculateColdOdds(){
 	  cold_odds = cold_count * 25;
-	}
+	}//multiply by 25 to show percentage
 
   </script>
 
@@ -100,7 +100,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> <!-- change page id for each page -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Are your eyes watery or itchy?</h1>
 	</div>
@@ -108,11 +108,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p> <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		</p>    
+		</p>    <!-- change page ref for each -->
 		 </div><!-- q1,buttons --> 
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!-- change page id for each page -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Do you have a fever?</h1>
 	</div>
@@ -120,11 +120,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
         <p> <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		</p>    
+		</p>    <!-- change page ref for each -->
 		 </div><!-- q2,buttons --> 
 </div>	
 
-<div class="page" id="three">
+<div class="page" id="three"> <!-- change page id for each page -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Do you have a sore throat?</h1>
 	</div>
@@ -132,11 +132,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
         <p> <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		</p>    
+		</p>    <!-- change page ref for each -->
 		 </div><!-- q3,buttons --> 
 </div>	
 
-<div class="page" id="four">
+<div class="page" id="four"> <!-- change page id for each page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Are your symptoms seasonal or chronic?</h1>
 	</div>
@@ -144,29 +144,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
         <p> <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
-		</p>    
+		</p>    <!-- change page ref for each -->
 		 </div><!-- q4,buttons --> 
 </div>	
 	
-<div class="page" id="five">
+<div class="page" id="five"> <!-- change page id for each page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Generate Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
         <p> <a href="#six"  onclick="calculateAllergyOdds();","calculateColdOdds();" class="w3-btn w3-black"> Generate Allergy and Cold Results</a>
-		</p>    
+		</p>    <!-- change page ref for each -->
 		 </div><!--  --> 
 </div>	
 
-<div class="page" id="six">
+<div class="page" id="six"> <!-- change page id for each page -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container"
-		<h1> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </h1>
-</div><!-- results page -->	
+		</p> <h1> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </h1> <p>
+</div><!-- results not showing up -->	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
