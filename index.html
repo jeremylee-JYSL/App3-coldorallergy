@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 To learn basics of app developing
  
 Known Issues:
-N/A
+No known issues
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -52,8 +52,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }//add count
 	
 	function results(){
-		var allergyPercent = (allergy_count/6) * 100;
-		var coldPercent = (cold_count/6) * 100;
+		var allergyPercent = (allergy_count/6) * 100%;
+		var coldPercent = (cold_count/6) * 100%;
 		var resultText = document.getElementById("results");
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 	}
@@ -163,7 +163,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="six"> <!-- change page id for each page -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Do you have aches and pains</h1> <!-- created 6th question -->
+		<h1>Do you have aches and pains?</h1> <!-- created 6th question -->
 	</div>
 	
 	<div id="content" class="w3-container">
