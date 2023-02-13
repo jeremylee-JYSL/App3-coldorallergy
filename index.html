@@ -45,20 +45,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		//alert(allergy_count);
-
         }//add count
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }//add count
 	
-	function calculateAllergyOdds(){
-	   allergy_odds = allergy_count * 25;
-	}//multiply by 25 to show percentage
+	function results(){
+		var allergyPercent = (allergy_count/6) * 100;
+		var coldPercent = (cold_count/6) * 100;
+		var resultText = document.getElementById("results");
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+	}
 	
-	function calculateColdOdds(){
-	  cold_odds = cold_count * 25;
-	}//multiply by 25 to show percentage
+	
 
   </script>
 
@@ -148,26 +148,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		 </div><!-- q4,buttons --> 
 </div>	
 	
+<!-- Results page -->
+	
 <div class="page" id="five"> <!-- change page id for each page -->
 	<div class="w3-container w3-flat-carrot">
-		<h1>Generate Results</h1>
-	</div>
-	
-	<div id="content" class="w3-container">
-        <p> <a href="#six"  onclick="calculateAllergyOdds();","calculateColdOdds();" class="w3-btn w3-black"> Generate Allergy and Cold Results</a>
-		</p>    <!-- change page ref for each -->
-		 </div><!--  --> 
-</div>	
-
-<div class="page" id="six"> <!-- change page id for each page -->
-	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
-		var resultText = document.getElementById("results");
+		
 	</div>
-	
-	<div id="content" class="w3-container"
-		</p> <h1> resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; </h1> <p>
-</div><!-- results not showing up -->	
+
+	<div id="content" class="w3-container">
+	 	<button onclick="results();"> Generate Results </button>
+</div><!--  -->	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
