@@ -40,6 +40,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;
 	var allergy_odds = 0;
 	var cold_odds = 0;
+	var diagnoseText = "";
 
 
         function allergyAdd(){
@@ -54,8 +55,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function results(){
 		var allergyPercent = (allergy_count/6) * 100;
 		var coldPercent = (cold_count/6) * 100;
-		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent % + "<br> Probability it is a cold =" + coldPercent % ;
+		//var resultText = document.getElementById("results");
+		//resultText.innerHTML = "Probability it is allergies =" + allergyPercent % + "<br> Probability it is a cold =" + coldPercent % ;
+		diagnoseText = "Probability it is allergies =" + allergyPercent % + "<br> Probability it is a cold =" + coldPercent % ;
 	}
 	
 	
@@ -183,8 +185,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	<div id="content" class="w3-container">
 	 	<button onclick="results();" class="w3-btn w3-black"> Generate Results </button>
+		<a href ="#finalPage"</a>
 		<p id="results"></p>
 </div><!--  -->	
+	
+<div class="page" id="finalPage">
+	<div class="w3-container w3-flat-carrot">
+		<h1> Results </h1>
+	</div>
+	<p> diagnoseText </p>
+	
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
