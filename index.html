@@ -51,14 +51,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }//add count
 	
-	function results(){
-		var allergyPercent = (allergy_count/6) * 100;
-		var coldPercent = (cold_count/6) * 100;
-		var resultText = document.getElementById("results");
-		document.getElementById("demo").innerHTML
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%" ;
-	}
-	
+	   function generateResults(){ /* created a generate result function to find percentages */
+        totalResponses = allergy_count + cold_count; /* this allows the total count of all the responses to be calculated based on the counts */
+               allergyPercent = (allergy_count / totalResponses)*100; /* calculates precentage of allergy*/
+        coldPercent = (cold_count / totalResponses)*100; /*Calculates precentage of cold */
+        document.getElementById("resultselement").innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%";
+    }
+
 	
 
   </script>
@@ -175,28 +174,36 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>	
 	
 <!-- Results page -->
-	
-<div class="page" id="results"> <!-- change page id for each page -->
-	<div class="w3-container w3-flat-carrot">
-		<h1>Results</h1>
-		
-	</div>
+    
+<div class="page" id="results1"> <!-- change page id for each page -->
+    <div class="w3-container w3-flat-carrot">
+        <h1>Results</h1>
+        
+    </div>
 
-	<div id="content" class="w3-container">
-	<p> onclick="results();" class="w3-btn w3-black"> Generate Results
-		</p>
-	</div>
-	
-	<div class="w3-container w3-flat-carrot">
-		<p> "results" </p>
-		
-	</div>
-	
-	
+    <div id="content" class="w3-container">
+    <a href = "#results2" onclick= "generateResults();" class="w3-btn w3-black"> Generate Results</a>
+    </div>
+    
+    <div class="w3-container w3-flat-carrot">
+        
+    </div>
+    
+    
+</div>
+    
+<div class="page" id="results2">
+    <div class="w3-container w3-flat-carrot">
+        <h1 >Here's what we found!</h1> 
+    </div>
+    
+    <div id="content" class="w3-container">
+        <p id = "resultselement">Your results</p> 
+    </div>
 </div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+    <p>DIY!</p>
 </footer>
 
 </body>
